@@ -114,7 +114,7 @@ if __name__ == "__main__":
     
     q = Queue.Queue(0)
 
-    ser = serial.Serial(3, 115200, timeout = 5)
+    ser = serial.Serial('/dev/ttyUSB0', 115200, timeout = 5)
     ser.setDTR(False)
     print ser.name
     getResponseDescriptor(ser)
